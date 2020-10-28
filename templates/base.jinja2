@@ -1,11 +1,34 @@
 <html>
 <head>
 <title>Piglatinize</title>
+<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css" />
+<div>
+    <style scoped="">
+    h1 {text-align: center;}
+        .button-main {
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
+        .button-main {
+            font-size: 125%;
+            background: rgb(66, 174, 221);
+        }
+    </style>
+</div>
 </head>
 <body>
-<h1>
-Piglatinize
-</h1>
-<a id="piglatinize" href="{{ body.url }}"> {{ body.url }}</a>
+<div class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3"></div>
+    <div class="pure-u-1 pure-u-md-1-3">
+        <h1 style='font-family:arial'>
+        Piglatinize
+        </h1>
+        <button class="button-main pure button">
+        <a style='font-family:arial' id="piglatinize" href="{{ body.url }}">{{ body.url }}</a>
+        </button>
+    </div>
+    <div class="pure-u-1 pure-u-md-1-3"></div>
+</div>
 </body>
 </html>
