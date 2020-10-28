@@ -1,7 +1,7 @@
 import os
 
 import requests
-from flask import Flask, send_file, Response
+from flask import Flask, send_file, Response, render_template
 from bs4 import BeautifulSoup
 
 app = Flask(__name__)
@@ -26,7 +26,7 @@ def home():
 
     body = requests.post('http://hidden-journey-62459.herokuapp.com/piglatinize/',
                          data=payload)
-    return body.url
+    return render_template('base.jinja2', body=body)
 
 
 if __name__ == "__main__":
